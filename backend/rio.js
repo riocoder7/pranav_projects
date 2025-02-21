@@ -24,13 +24,16 @@ app.get("/login", (req, res) => {
     res.sendFile(path.join(__dirname, "../fronted/html/login.html"));
 });
 
+app.get("/profile", (req, res) => {
+    res.sendFile(path.join(__dirname, "../fronted/html/profile.html"));
+});
 app.post("/login", (req, res) => {
     const { email, password } = req.body;
     console.log("email is :", email,"\n", "password is :", password);
 
     
 
-    res.json({"email is :": email, "password is :": password});
+    res.redirect("/profile");
 });
 
 
