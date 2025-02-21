@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Signup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="flex flex-col lg:flex-row bg-white rounded-lg shadow-lg w-full max-w-4xl overflow-hidden">
+        <!-- Left Side (Hidden on small screens) -->
+        <div class="hidden lg:flex w-1/2 bg-gradient-to-r from-blue-500 to-purple-600 text-white p-10 flex-col justify-center">
+            <h2 class="text-2xl font-bold">A few clicks away from deploying your cloud.</h2>
+            <ul class="mt-4 text-sm space-y-2">
+                <li>✔ Sign up</li>
+                <li>✔ Verify email</li>
+                <li>✔ Contact details</li>
+                <li>✔ Set up billing</li>
+                <li>✔ Project selector</li>
+            </ul>
+        </div>
+        
+        <!-- Right Side (Signup Form) -->
+         <form class="w-full lg:w-1/2 p-8" action="/register" method="post">
+        <div >
+            <h2 class="text-2xl font-bold text-gray-700 text-center">Sign up </h2>
+            <p class="text-sm text-gray-500 text-center mb-6">Create an account to get started</p>
+            
+            <form class="space-y-4">
+                <div class="flex space-x-4">
+                    <div class="w-1/2">
+                        <label class="block text-sm font-medium text-gray-700">First Name</label>
+                        <input type="text" name="firstName" class="w-full px-4 py-2 mt-1 border rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div class="w-1/2">
+                        <label class="block text-sm font-medium text-gray-700">Last Name</label>
+                        <input type="text" name="lastName" class="w-full px-4 py-2 mt-1 border rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Email Address</label>
+                    <input type="email" name="email" class="w-full px-4 py-2 mt-1 border rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div class="flex space-x-4">
+                    <div class="w-1/2">
+                        <label class="block text-sm font-medium text-gray-700">Password</label>
+                        <input type="password" name="password" class="w-full px-4 py-2 mt-1 border rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div class="w-1/2">
+                        <label class="block text-sm font-medium text-gray-700">Confirm Password</label>
+                        <input type="password" name="ConfirmPassword" class="w-full px-4 py-2 mt-1 border rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                </div>
+                <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 mt-5">Create Account</button>
+            </form>
+            
+            <p class="mt-4 text-center text-sm text-gray-500">Have an account? <a href="login.html" class="text-blue-500">Log in</a></p>
+        </div>
+    </form>
+    </div>
+</body>
+</html>

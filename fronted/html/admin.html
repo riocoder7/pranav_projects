@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+       <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside id="sidebar" class="w-64 bg-blue-900 text-white p-5 hidden md:block">
+            <h2 class="text-2xl font-bold mb-5">Admin Panel</h2>
+            <nav>
+                <ul>
+                    <li class="mb-2"><a href="#" class="block p-2 hover:bg-blue-700 rounded">Dashboard</a></li>
+                    <li class="mb-2"><a href="#" class="block p-2 hover:bg-blue-700 rounded">Properties</a></li>
+                    <li class="mb-2"><a href="#" class="block p-2 hover:bg-blue-700 rounded">Users</a></li>
+                    <li class="mb-2"><a href="#" class="block p-2 hover:bg-blue-700 rounded">Analytics</a></li>
+                    <li class="mb-2"><a href="#" class="block p-2 hover:bg-blue-700 rounded">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <!-- Main Content -->
+        <div class="flex-1 p-6">
+            <!-- Header -->
+            <header class="flex justify-between items-center mb-6">
+                <h1 class="text-3xl font-semibold">Dashboard</h1>
+                <button id="menuToggle" class="md:hidden bg-blue-900 text-white px-4 py-2 rounded">Menu</button>
+            </header>
+            
+            <!-- Stats Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                <div class="bg-white p-5 rounded shadow">
+                    <h3 class="text-lg font-semibold">Total Properties</h3>
+                    <p class="text-2xl font-bold">250</p>
+                </div>
+                <div class="bg-white p-5 rounded shadow">
+                    <h3 class="text-lg font-semibold">Revenue</h3>
+                    <p class="text-2xl font-bold">$120K</p>
+                </div>
+                <div class="bg-white p-5 rounded shadow">
+                    <h3 class="text-lg font-semibold">New Users</h3>
+                    <p class="text-2xl font-bold">1,200</p>
+                </div>
+            </div>
+            
+            <!-- Add Property Form -->
+            <div class="bg-white p-5 rounded shadow mb-6">
+                <h2 class="text-xl font-semibold mb-4">Add Property</h2>
+                <input type="text" id="propertyName" placeholder="Property Name" class="border p-2 w-full mb-2">
+                <input type="text" id="propertyLocation" placeholder="Location" class="border p-2 w-full mb-2">
+                <input type="text" id="propertyPrice" placeholder="Price" class="border p-2 w-full mb-2">
+                <button id="addProperty" class="bg-blue-900 text-white px-4 py-2 rounded">Add Property</button>
+            </div>
+            
+            <!-- Property Listings -->
+            <div class="bg-white p-5 rounded shadow">
+                <h2 class="text-xl font-semibold mb-4">Properties List</h2>
+                <table class="w-full border-collapse border border-gray-200">
+                    <thead>
+                        <tr class="bg-gray-100">
+                            <th class="p-3 border">Property Name</th>
+                            <th class="p-3 border">Location</th>
+                            <th class="p-3 border">Price</th>
+                            <th class="p-3 border">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="propertyTable">
+                        <tr>
+                            <td class="p-3 border">Luxury Villa</td>
+                            <td class="p-3 border">New York</td>
+                            <td class="p-3 border">$2,000,000</td>
+                            <td class="p-3 border text-red-600 cursor-pointer delete">Delete</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 border">Modern Apartment</td>
+                            <td class="p-3 border">Los Angeles</td>
+                            <td class="p-3 border">$850,000</td>
+                            <td class="p-3 border text-red-600 cursor-pointer delete">Delete</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 border">Beach House</td>
+                            <td class="p-3 border">Miami</td>
+                            <td class="p-3 border">$1,500,000</td>
+                            <td class="p-3 border text-red-600 cursor-pointer delete">Delete</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="../js/admin.js"></script>
+</body>
+</html>
